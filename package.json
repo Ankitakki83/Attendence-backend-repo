@@ -2,7 +2,7 @@
     "name": "rest-api",
     "version": "1.0.0",
     "description": "backend for rest api",
-    "author": "Manish Kumar Jha",
+    "author": "Ankit Kumar Maurya",
     "license": "MIT",
     "scripts": {
         "dev-server": "nodemon --exec \"nodemon --exec NODE_ENV=development babel-node --inspect src\"",
@@ -34,15 +34,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Manishjha1991/realtime-cricket-score.git"
+        "url": "https://github.com/Ankitakki83/Attendence-backend-repo.git"
     },
     "keywords": [
         "backend"
     ],
     "bugs": {
-        "url": "https://github.com/Manishjha1991/realtime-cricket-score/issues"
+        "url": "https://github.com/Ankitakki83/Attendence-backend-repo/issues"
     },
-    "homepage": "https://github.com/Manishjha1991/realtime-cricket-score/blob/master/README.md",
     "dependencies": {
         "babel-cli": "^6.26.0",
         "babel-plugin-transform-builtin-extend": "^1.1.2",
