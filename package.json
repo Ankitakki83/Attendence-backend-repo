@@ -1,0 +1,78 @@
+{
+    "name": "rest-api",
+    "version": "1.0.0",
+    "description": "backend for rest api",
+    "author": "Manish Kumar Jha",
+    "license": "MIT",
+    "scripts": {
+        "dev-server": "nodemon --exec \"nodemon --exec NODE_ENV=development babel-node --inspect src\"",
+        "build": "babel -d ./build src",
+        "start": "yarn run build ",
+        "test": "NODE_ENV=test jest --forceExit --runInBand",
+        "lint": "eslint 'src/**/*.js'",
+        "precommit": "lint-staged",
+        "fix-lint": "prettier --write './src/**/*.js' && npm run-script lint"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json"
+        ],
+        "testMatch": [
+            "**/?(*.)(spec|test).js"
+        ],
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        },
+        "testEnvironment": "node"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Manishjha1991/realtime-cricket-score.git"
+    },
+    "keywords": [
+        "backend"
+    ],
+    "bugs": {
+        "url": "https://github.com/Manishjha1991/realtime-cricket-score/issues"
+    },
+    "homepage": "https://github.com/Manishjha1991/realtime-cricket-score/blob/master/README.md",
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-transform-builtin-extend": "^1.1.2",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.6.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.2",
+        "cookie-parser": "^1.4.3",
+        "cors": "^2.8.5",
+        "express": "^4.16.1",
+        "express-force-ssl": "^0.3.2",
+        "husky": "^0.14.3",
+        "jsonwebtoken": "^8.0.1",
+        "lodash": "^4.17.4",
+        "moment": "^2.20.1",
+        "mongoose": "^5.0.0-rc2",
+        "uuid": "^3.1.0",
+        "validator": "^9.2.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.0.1",
+        "babel-jest": "^21.2.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "eslint": "^4.8.0",
+        "eslint-config-prettier": "^2.6.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-prettier": "^2.3.1",
+        "jest": "^21.2.1",
+        "nodemon": "^1.12.1",
+        "prettier": "^1.7.3"
+    }
+}
